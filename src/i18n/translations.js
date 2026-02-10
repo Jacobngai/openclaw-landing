@@ -141,7 +141,7 @@ export const translations = {
       title: 'Ready to Get Started?',
       subtitle: 'Join 10+ businesses already using OpenClaw',
       button: 'WhatsApp "AI" Now',
-      phone: 'Or call: 011-2422-8322',
+      phone: 'Or call: 017-574 0795',
     },
     // Footer
     footer: {
@@ -293,7 +293,7 @@ export const translations = {
       title: 'Ready Nak Mula?',
       subtitle: 'Join 10+ bisnes yang dah guna OpenClaw',
       button: 'WhatsApp "AI" Sekarang',
-      phone: 'Atau call: 011-2422-8322',
+      phone: 'Atau call: 017-574 0795',
     },
     // Footer
     footer: {
@@ -445,7 +445,7 @@ export const translations = {
       title: '准备好开始了吗？',
       subtitle: '加入已经使用OpenClaw的10+企业',
       button: '立即WhatsApp "AI"',
-      phone: '或致电：011-2422-8322',
+      phone: '或致电：017-574 0795',
     },
     // Footer
     footer: {
