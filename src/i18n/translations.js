@@ -107,6 +107,10 @@ export const translations = {
       title: 'Frequently Asked Questions',
       questions: [
         {
+          q: 'Do I need my own PC?',
+          a: 'We recommend using your own PC if you have one available (even an old laptop works!). If not, we can help you set up a VPS (Virtual Private Server) — basically a PC in the cloud that runs 24/7. We\'ll register AWS Windows for you that you can control from your own PC or Mac. VPS is included FREE for 6 months (worth RM800).',
+        },
+        {
           q: 'Do I need a Mac?',
           a: 'No! OpenClaw works perfectly on Windows. No Mac or expensive hardware needed.',
         },
@@ -255,6 +259,10 @@ export const translations = {
       title: 'Soalan Lazim',
       questions: [
         {
+          q: 'Perlu PC sendiri ke?',
+          a: 'Kami sarankan guna PC sendiri kalau ada (laptop lama pun boleh!). Kalau takde, kami boleh bantu setup VPS (Virtual Private Server) — basically PC dalam cloud yang jalan 24/7. Kami akan daftarkan AWS Windows untuk anda yang boleh control dari PC atau Mac anda sendiri. VPS PERCUMA 6 bulan (nilai RM800).',
+        },
+        {
           q: 'Perlu Mac ke?',
           a: 'Tak! OpenClaw jalan sempurna kat Windows. Tak perlu Mac atau hardware mahal.',
         },
@@ -402,6 +410,10 @@ export const translations = {
     faq: {
       title: '常见问题',
       questions: [
+        {
+          q: '需要自己的电脑吗？',
+          a: '如果你有闲置的电脑，我们建议使用自己的电脑（旧笔记本也可以！）。如果没有，我们可以帮你设置VPS（虚拟私人服务器）— 基本上是云端24/7运行的电脑。我们会为你注册AWS Windows，你可以从自己的PC或Mac控制它。VPS免费6个月（价值RM800）。',
+        },
         {
           q: '需要Mac吗？',
           a: '不需要！OpenClaw在Windows上运行完美。不需要Mac或昂贵硬件。',
