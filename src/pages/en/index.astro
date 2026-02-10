@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslation } from '../../i18n/translations.js';
+
+const lang = 'en';
+const t = getTranslation(lang);
+---
+
+<BaseLayout 
+  title="OpenClaw AI Setup Service | RM100 Setup + RM1,100 Free Credits" 
+  description="Get your AI assistant set up for just RM100. Includes RM1,100 in free Google AI credits. Works on Windows. No coding needed."
+  lang={lang}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-lobster-50 via-white to-ocean-50 py-16 md:py-24">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-block bg-lobster-100 text-lobster-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          {t.hero.badge}
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-gray-900 mb-4">
+          {t.hero.headline}
+          <span class="text-lobster-500">{t.hero.headlineHighlight}</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          {t.hero.subheadline}
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="https://wa.me/601124228322?text=AI" target="_blank" class="btn btn-whatsapp">
+            💬 {t.hero.cta}
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            {t.hero.ctaSecondary}
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto">
+          <div class="text-center">
+            <div class="text-2xl md:text-3xl font-bold text-lobster-500">{t.hero.stat1}</div>
+            <div class="text-sm text-gray-500">{t.hero.stat1Label}</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl md:text-3xl font-bold text-ocean-500">{t.hero.stat2}</div>
+            <div class="text-sm text-gray-500">{t.hero.stat2Label}</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl md:text-3xl font-bold text-gray-700">{t.hero.stat3}</div>
+            <div class="text-sm text-gray-500">{t.hero.stat3Label}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lobster Mascot -->
+      <div class="flex justify-center mt-8">
+        <div class="text-8xl animate-bounce-slow">🦞</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-4">
+          {t.problem.title}
+        </h2>
+        <p class="text-xl text-gray-500 text-center mb-12">{t.problem.subtitle}</p>
+
+        <!-- Comparison Table -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Regular AI -->
+          <div class="card border-gray-200 bg-gray-50">
+            <div class="text-center">
+              <div class="text-2xl mb-2">😕</div>
+              <h3 class="font-bold text-xl mb-2">{t.problem.comparison.before}</h3>
+              <div class="text-2xl font-bold text-gray-500 mb-1">{t.problem.comparison.beforePrice}</div>
+              <div class="text-sm text-gray-500 mb-4">{t.problem.comparison.beforeYear}</div>
+              <div class="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
+                {t.problem.comparison.beforeDoes}
+              </div>
+            </div>
+          </div>
+
+          <!-- OpenClaw -->
+          <div class="card border-green-300 bg-green-50 ring-2 ring-green-400">
+            <div class="text-center">
+              <div class="text-2xl mb-2">🦞</div>
+              <h3 class="font-bold text-xl mb-2">{t.problem.comparison.openclaw}</h3>
+              <div class="text-2xl font-bold text-green-600 mb-1">{t.problem.comparison.openclawPrice}</div>
+              <div class="text-sm text-green-600 font-medium mb-4">{t.problem.comparison.openclawCredits}</div>
+              <div class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                {t.problem.comparison.openclawDoes}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Points -->
+        <div class="mt-12 text-center space-y-4">
+          <p class="text-lg"><span class="text-red-500 font-medium">{t.problem.point1}</span></p>
+          <p class="text-lg"><span class="text-green-600 font-medium">{t.problem.point2}</span></p>
+          <p class="text-xl font-bold text-gray-800">{t.problem.point3}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">{t.features.title}</h2>
+        <p class="text-xl text-gray-500">{t.features.subtitle}</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {t.features.list.map((feature, index) => (
+          <div class="card">
+            <div class="text-3xl mb-4">
+              {index === 0 && '🔍'}
+              {index === 1 && '📧'}
+              {index === 2 && '📁'}
+              {index === 3 && '📅'}
+              {index === 4 && '✍️'}
+              {index === 5 && '🌙'}
+            </div>
+            <h3 class="font-bold text-lg mb-2">{feature.title}</h3>
+            <p class="text-gray-600">{feature.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- For Who Section -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12">{t.forWho.title}</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- For Employees -->
+        <div class="card-highlight">
+          <h3 class="text-2xl font-bold mb-2">{t.forWho.employees.title}</h3>
+          <p class="text-gray-600 mb-6">{t.forWho.employees.subtitle}</p>
+          <ul class="space-y-3">
+            {t.forWho.employees.points.map((point) => (
+              <li class="flex items-start gap-2">
+                <span class="text-lobster-500 mt-1">✓</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- For Business -->
+        <div class="card-highlight">
+          <h3 class="text-2xl font-bold mb-2">{t.forWho.business.title}</h3>
+          <p class="text-gray-600 mb-6">{t.forWho.business.subtitle}</p>
+          <ul class="space-y-3">
+            {t.forWho.business.points.map((point) => (
+              <li class="flex items-start gap-2">
+                <span class="text-ocean-500 mt-1">✓</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section bg-lobster-500 text-white">
+    <div class="container-custom">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">{t.pricing.title}</h2>
+        <p class="text-lobster-100 text-lg mb-8">{t.pricing.subtitle}</p>
+
+        <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-2xl">
+          <div class="text-6xl font-black text-lobster-500 mb-2">{t.pricing.price}</div>
+          <div class="text-gray-500 mb-6">{t.pricing.perPc} • {t.pricing.oneTime}</div>
+
+          <div class="text-left mb-8">
+            <div class="font-bold mb-4">{t.pricing.includes}</div>
+            <ul class="space-y-3">
+              {t.pricing.features.map((feature) => (
+                <li class="flex items-center gap-3">
+                  <span class="bg-green-100 text-green-600 rounded-full p-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <a href="https://wa.me/601124228322?text=AI" target="_blank" class="btn btn-primary w-full">
+            💬 {t.pricing.cta}
+          </a>
+
+          <p class="text-sm text-gray-500 mt-4">{t.pricing.note}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section bg-white">
+    <div class="container-custom">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12">{t.faq.title}</h2>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        {t.faq.questions.map((item) => (
+          <details class="card group">
+            <summary class="font-bold cursor-pointer list-none flex justify-between items-center">
+              {item.q}
+              <span class="text-lobster-500 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="text-gray-600 mt-4">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section bg-gradient-to-br from-lobster-500 to-lobster-600 text-white">
+    <div class="container-custom text-center">
+      <div class="text-6xl mb-6">🦞</div>
+      <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">{t.cta.title}</h2>
+      <p class="text-lobster-100 text-lg mb-8">{t.cta.subtitle}</p>
+
+      <a href="https://wa.me/601124228322?text=AI" target="_blank" class="btn bg-white text-lobster-500 hover:bg-gray-100 px-8 py-4 text-lg font-bold">
+        💬 {t.cta.button}
+      </a>
+
+      <p class="text-lobster-200 mt-4">{t.cta.phone}</p>
+    </div>
+  </section>
+</BaseLayout>
